@@ -1,2 +1,3 @@
 # Quiz-App
-Quiz app basis.
+
+Create quizzes based on this template.
