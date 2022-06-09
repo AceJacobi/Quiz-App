@@ -9,6 +9,7 @@ q4 = Question("Who invented the light bulb? \n(a)Benjamin Franklin\n(b)Issac New
 q5 = Question("Finish the quote: \"What goes up must come ____:\" \n(a)Around \n(b)Down \n(c)Directly Below \n(d)Full Swing \n", "B")
 
 lives = 3
+
 correct = 0
 
 questionArray = [q1, q2, q3, q4, q5]
@@ -17,24 +18,31 @@ questionArray = [q1, q2, q3, q4, q5]
 while lives > 0:
 
     for i in questionArray:
+        
         if lives == 0:
             break
+            
         else:
             quest = i.prompt
             answer = i.answer
 
             print(quest)
+            
             guess = input('Your answer choice? ')
+            
             if guess.upper() == answer:
                 correct += 1
                 print('Correct!')
 
             else:
                 lives -= 1
+                
                 if lives > 1:
                     print('Wrong answer given. ' + str(lives) + ' lives remaining.')
+                    
                 elif lives == 1:
                     print('Wrong answer given. ' + str(lives) + ' life remaining.')
+                    
                 else:
                     print('Wrong answer! Out of lives!')
 
